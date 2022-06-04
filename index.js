@@ -10,16 +10,17 @@ const dates = [
 // TODO: Buatlah fungsi createDate
 const createDate = function(dataDate, position = null){
   const resultDate = [];
-  dataDate.sort();
-  
   for (let index = 0; index < dataDate.length; index++) {
     resultDate.push(Date.parse(new Date(dataDate[index]))/1000);
 
-    if(position == index) return resultDate[index].toString();
-
   }
   
-  return resultDate.join("-");
+  resultDate.sort();
+  if(position == null){
+    return resultDate.join("-");
+  }else{
+    return resultDate[position].toString();
+  }
 };
 
 // ! JANGAN DIMODIFIKASI
