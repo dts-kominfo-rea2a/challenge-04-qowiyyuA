@@ -11,7 +11,7 @@ const dates = [
 const createDate = function(dataDate, position = null){
   const resultDate = [];
   for (let index = 0; index < dataDate.length; index++) {
-    resultDate.push(Date.parse(new Date(dataDate[index]))/1000);
+    resultDate.push(Date.parse(dataDate[index])/1000);
 
   }
   
